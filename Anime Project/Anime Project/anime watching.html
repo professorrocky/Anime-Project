@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>anime watching</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#home{
+        display: flex;
+        margin-left: 60px;
+        margin-top: 50px;
+        font-size: smaller;
+    }
+.me a{
+    color: white;
+    text-decoration: none;
+}
+.me p{
+    display: inline;
+    color: gray;
+}
+.me i{
+    color: white;
+}
+
+#vid{
+    margin-left: 150px;
+    margin-top: 50px;
+}
+
+#list{
+    color: white;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#episode{
+    display: flex;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#episode .onnu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .onnu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .rendu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .rendu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .moonu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .moonu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .naalu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .naalu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .anji a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .anji a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .aaru a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .aaru a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .eazhu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .eazhu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .ettu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .ettu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .oanbathu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .oanbatthu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .pathu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathu a:hover{
+    background-color: white;
+    color: black;
+}
+#episode .pathinonnu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathinonnu a:hover{
+    background-color: white;
+    color: black;
+}
+
+#part{
+    display: flex;
+    margin-left: 140px;
+    margin-top: 30px;
+}
+
+#part .zero a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .zero a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathirendu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathirendu a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathimoonu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathimoonu a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathinaalu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathinaalu a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathianji a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathianji a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathiaaru a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathiaaru a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathieazhu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathieazhu a:hover{
+    background-color: white;
+    color: black;
+}
+#part .pathiettu a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    margin-left: 10px;
+    padding: 5px 15px;
+    transition: background-color,color,1s;
+}
+#episode .pathiettu a:hover{
+    background-color: white;
+    color: black;
+}
+
+#swe{
+    color: white;
+    margin-left: 149px;
+    margin-top: 30px;
+}
+
+#comments-container{
+    width: px;
+}
+.naruto{
+    display: flex;
+    /* align-items: flex-start;
+    margin-bottom: 25px; */
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-left: 150px;
+    margin-top: 20px;
+    background: #ffffff33;
+}
+.bubble{
+    background-color: #4c4b74;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 50%;
+    position: relative;
+}
+.name-time{
+    color: white;
+    margin-bottom: 5px;
+}
+.uzumaki{
+    color: darkgray;
+}
+.bubble::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 13px;
+        width: 0;
+        height: 0;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-right: 18px solid #4c4b74;
+    }
+
+#your{
+    color: white;
+    margin-left: 150px;
+    margin-top: 30px;
+}
+
+#tobi{
+    margin-left: 150px;
+    margin-top: 20px;
+}
+input[type=textarea], select {
+  width: 65%;
+  padding: 30px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#lol{
+    margin-top: 20px;
+}
+#lol a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 5px 12px;
+    margin-left: 150px;
+    font-variant: small-caps;
+}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 5%;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 250px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+</style>
+    </head>
+
+<body>
+    
+<header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="home">
+    <div class="me">
+    <i class="fa-solid fa-house fa-2xs" style="color: #e00606;"></i> <a href="Anime.html">Home</a>
+    <i class="fa-solid fa-angle-right fa-2xs"></i>
+    <a href="categories.html">Categories</a>
+    <i class="fa-solid fa-angle-right fa-2xs"></i>
+    <a href="#">Romance</a>
+    <i class="fa-solid fa-angle-right fa-2xs"></i>
+    <p> Fate Stay Night: Unlimited Blade</p>
+    </div>
+</div>
+
+<div id="vid">
+    <div>
+        <video width="86%" height="600" controls>
+            <source src="./Anime images/Shape of You  [ AMV - MIX ] Anime Mix.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
+
+<div id="list">
+    <div>
+        <h3>LIST NAME</h3>
+    </div>
+</div>
+
+<div id="episode">
+    <div class="onnu">
+        <a href="#">Ep 01</a>
+    </div>
+
+    <div class="rendu">
+        <a href="#">Ep 02</a>
+    </div>
+
+    <div class="moonu">
+        <a href="#">Ep 03</a>
+    </div>
+
+    <div class="naalu">
+        <a href="#">Ep 04</a>
+    </div>
+
+    <div class="anji">
+        <a href="#">Ep 05</a>
+    </div>
+
+    <div class="aaru">
+        <a href="#">Ep 06</a>
+    </div>
+
+    <div class="eazhu">
+        <a href="#">Ep 07</a>
+    </div>
+
+    <div class="ettu">
+        <a href="#">Ep 08</a>
+    </div>
+
+    <div class="oanbathu">
+        <a href="#">Ep 09</a>
+    </div>
+
+    <div class="pathu">
+        <a href="#">Ep 10</a>
+    </div>
+
+    <div class="pathinonnu">
+        <a href="#">Ep 11</a>
+    </div>
+</div>
+
+<div id="part">
+    <div class="zero">
+        <a href="#">Ep 12</a>
+    </div>
+
+    <div class="pathirendu">
+        <a href="#">Ep 13</a>
+    </div>
+
+    <div class="pathimoonu">
+        <a href="#">Ep 14</a>
+    </div>
+
+    <div class="pathinaalu">
+        <a href="#">Ep 15</a>
+    </div>
+
+    <div class="pathianji">
+        <a href="#">Ep 16</a>
+    </div>
+
+    <div class="pathiaaru">
+        <a href="#">Ep 17</a>
+    </div>
+
+    <div class="pathieazhu">
+        <a href="#">Ep 18</a>
+    </div>
+
+    <div class="pathiettu">
+        <a href="#">Ep 19</a>
+    </div>
+</div>
+
+<div id="swe">
+    <div>
+        <h3>REVIEWS</h3>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n1.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Madara - <span style="color: darkgray; font-size: small;">1 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>whachikan Just noticed that someone categorized this as belonging to the genre "demons" LOL</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n2.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Sasuke - <span style="color: darkgray; font-size: small;">5 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Finally it came out ages ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n3.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Naruto - <span style="color: darkgray; font-size: small;">20 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>whachikan Just noticed that someone categorized this as belonging to the genre "demons" LOL</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n4.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Itachi - <span style="color: darkgray; font-size: small;">1 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Where is the episode 15 ? Slow update! Tch</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n5.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Obito - <span style="color: darkgray; font-size: small;">5 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Finally it came out ages ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n6.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Kakashi - <span style="color: darkgray; font-size: small;">20 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Where is the episode 15 ? Slow update! Tch</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="your">
+    <h3>YOUR COMMENT</h3>
+</div>
+
+<div id="tobi">
+    <label for="com"></label>
+    <input type="textarea" id="com" name="com" placeholder="Your Comment">
+</div>
+
+<div id="lol">
+    <a href="#"><i class="fa-solid fa-comment fa-2xs" style="color: #ffffff;">&nbsp;</i>review</a>
+</div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

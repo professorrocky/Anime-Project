@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<head>
+    <title>Anime Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#ani img{
+    width: 81%;
+    height: 480px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 140px;
+}
+#ani .st{
+    border: 1px solid white;
+    width: 85px;
+    background-color: white;
+    color: hotpink;
+    padding: 3px;
+    margin-left: 200px;
+    margin-top: 250px;
+}
+
+#ani h4, p, #ani a{
+    color: black;
+    position: absolute;
+    z-index: 1;
+    margin-top: 420px;
+    margin-left: 200px;
+}
+#ani .rs{
+    font-size: xx-large;
+    font-weight: 800;
+    color: hotpink;
+    margin-left: 200px;
+    margin-top: 300px;
+}
+#ani a{
+    color: white;
+    background-color: #f44336;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 470px;
+}
+#trending{
+    color: white;
+    margin-top: 90px;
+    margin-left: 140px;
+    display: flex;
+}
+
+#trending a{
+    text-decoration: none;
+    color: white;
+    margin-left: 485px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+.top{
+    margin-top: -25px;
+    
+}
+
+.top a{
+    color: white;
+    padding-left: 910px;
+    text-decoration: none;
+}
+
+
+#fly{
+    display: flex;
+    margin-left: 128px;
+    margin-top: -51%;
+}
+#fly h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#el{
+    display: flex;
+    margin-left: 127px;
+    margin-top: 20px;
+}
+#el h4{
+    color: white;
+    margin-left: 20px;
+}
+.day{
+    margin-left: 20px;
+    margin-top: -20px;
+    display: inline-flex;
+}
+.week{
+    margin-left: 72%;
+    margin-top: -20px;
+
+}
+.day a{
+    text-decoration: none;
+    color: white;
+    font-size: x-small;
+    padding: 5px;
+}
+.aa{
+    margin-left: 900px;
+    margin-top: 50px;
+    font-size: x-small;
+     color: white;
+}
+.aa h3{
+    margin-left: 50px;
+}
+
+#pop{
+    color: white;
+    margin-top: 70px;
+    margin-left: 140px;
+    display: flex;
+}
+#pop a{
+    text-decoration: none;
+    color: white;
+    margin-left: 420px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+#show{
+    display: flex;
+    margin-left: 125px;
+    margin-top: -50%;
+}
+#show h4{
+    color: white;
+    margin-left: 20px;
+}
+#snow{
+    display: flex;
+    margin-left: 125px;
+    margin-top: 20px;
+}
+#snow h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#comment{
+    margin-left: 60%;
+    margin-top:50px;
+}
+#comment a{
+    text-decoration: none;
+    color: white;
+}
+
+#bb{
+    margin-left: 900px;
+    margin-top: 50px;
+    color: white;
+    font-size: x-small;
+}
+#bb h3{
+    margin-left: 50px;
+}
+
+#recent{
+    color: white;
+    margin-top: 70px;
+    margin-left: 140px;
+    display: flex;
+}
+#recent a{
+    text-decoration: none;
+    color: white;
+    margin-left: 370px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+.hope{
+    margin-top: 50px;
+    margin-left: 28px;
+    
+}
+
+.hope a{
+    color: white;
+    padding-left: 880px;
+    text-decoration: none;
+}
+
+.zz{
+    margin-left: 890px;
+    margin-top: 50px;
+    font-size: x-small;
+}
+.zz h3{
+    margin-left: 100px;
+}
+
+.zz{
+    color: white;
+}
+
+#sp{
+    display: flex;
+    margin-left: 120px;
+    margin-top: -57%;
+}
+#sp h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#ps{
+    display: flex;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+#ps h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#live{
+    color: white;
+    margin-top: 60px;
+    margin-left: 135px;
+    display: flex;
+}
+#live a{
+    text-decoration: none;
+    color: white;
+    margin-left: 490px;
+    margin-top: 6px;
+    padding-left: 10px;
+}
+
+#ds{
+    display: flex;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+#ds h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#sd{
+    display: flex;
+    margin-left: 120px;
+    margin-top: 20px;
+}
+#sd h4{
+    color: white;
+    margin-left: 20px;
+}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 50px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 300px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+        
+</style>
+</head>
+<body>
+
+     </head>
+
+    <body>
+        <header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="ani">
+    <h4 class="st">Adventure</h4>
+    <p class="rs">Fate / Stay Night: Unlimited <br> Blade Works</p>
+    <p>After 30 days of travel across the world...</p>
+    <a href="#">Watch Now <i class="fa-solid fa-angle-right"></i></a>
+    <img src="/Anime Project/Anime images/back.webp" alt="Anime">
+</div> 
+
+<div id="trending">
+    <h2>Trending Now</h2>
+    <a href="Anime.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="top">
+    <a href="#"><b><big>|</big></b><small> TOP VIEWS</small></a>
+    <div class="wa"></div>
+</div>
+
+<div class="week">
+    <div class="day">
+        <a href="#">Day</a>
+        <a href="#">Week</a>
+        <a href="#">Month</a>
+        <a href="#">Year</a>
+    </div>
+</div>
+<div class="aa">
+    <div>
+        <img src="./Anime images/rs1.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>One Piece</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs2.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>Boruto: Naruto next generations</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs3.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>One Piece Master</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs4.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>One Punch Man</h3>
+    </div>
+
+</div>
+
+<div id="fly">
+
+   <div class="one">
+    <img src="./Anime images/r1.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+    <h4>My Hero Academia</h4>
+   </div>
+
+   <div class="two">
+    <img src="./Anime images/r2.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+    <h4>Jujutsu Kaisen</h4>
+   </div>
+
+   <div class="three">
+    <img src="./Anime images/r3.png" alt="" width="250px" height="300px" style="padding: 10px;">
+    <h4>Dan Dan Dan</h4>
+   </div>
+</div>
+
+<div id="el">
+
+    <div>
+        <img src="./Anime images/r4.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Solo Leveling</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r5.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Dragon Ball</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r6.jpg" alt=""width="250px" height="300px" style="padding: 10px;">
+        <h4>Hotel Inhumans</h4>
+    </div>
+</div>
+
+<div id="pop">
+   
+        <h2>POPULAR SHOWS</h2>
+        <a href="Anime.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div id="comment">
+    <a href="Anime.html"><b><big>|</big></b><small> TOP VIEWS</small></a>
+    <div class="ts"></div>
+</div>
+
+<div id="bb">
+
+    <div>
+        <img src="./Anime images/sr1.jpg" alt="" width="300px" height="200px" style="padding: 10px;">
+        <h3>The Seven Deadly Sins:<br> Wrath of the Gods</h4>
+    </div>
+
+  
+
+    <div>
+        <img src="./Anime images/sr3.webp" alt="" width="300px" height="200px" style="padding: 10px;">
+        <h3>Kizumonogatari III: Reiket <br> su-hen</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/sr4.webp" alt="" width="300px" height="200px" style="padding: 10px;">
+        <h3>Monogatari Series: Second <br> Season</h4>
+    </div>
+</div>
+
+<div id="show">
+
+    <div>
+        <img src="./Anime images/r7.png" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Sen to Chihiro no <br> Kamikakushi</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r8.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Kizumonogatari III: Reiket <br> su-hen</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r9.png" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Shirogane Tamashii <br> hen Kouhan sen</h4>
+    </div>
+</div>
+
+    <div id="snow">
+    <div>
+        <img src="./Anime images/r10.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Rurouni Kenshin: Meiji <br> Kenkaku Romantan</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r11.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>The Witch From Mercury</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/r12.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Death Note</h4>
+    </div>
+</div>
+
+<div id="recent">
+    <h2>Recently Added Shows</h2>
+    <a href="Anime.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div class="hope">
+    <a href="#"><b><big>|</big></b><small> TOP VIEWS</small></a>
+    <div class="wa"></div>
+</div>
+
+<div class="zz">
+
+    <div>
+        <img src="./Anime images/breaking.webp" alt="" width="300px" style="padding: 10px;">
+        <h3>Breaking Bad</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/peaky.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>Peaky Blinders</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/dark.webp" alt="" width="300px" style="padding: 10px;">
+        <h3>Dark</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/cobra.webp" alt="" width="300px" style="padding: 10px;">
+        <h3>Cobra Kai</h3>
+    </div>
+</div>
+
+
+<div id="sp">
+    <div>
+        <img src="./Anime images/mn1.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Stranger Things</h4>
+
+    </div>
+
+    <div>
+        <img src="./Anime images/mn2.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Game Of Thrones</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/mn3.jpg" alt=""width="250px" height="300px" style="padding: 10px;">
+        <h4>Money Heist</h4>
+    </div>
+</div>
+
+<div id="ps">
+
+    <div>
+        <img src="./Anime images/mn4.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Weak hero class 1</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/mn5.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Kizumonogatari II: Nekket <br> su-hen</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/mn6.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Bloodhound</h4>
+    </div>
+</div>
+
+<div id="live">
+    <h2>LIVE ACTION</h2>
+    <a href="Anime.html">View All <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+
+<div id="ds">
+    <div>
+        <img src="./Anime images/nm1.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>The Boys</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/nm2.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Wednesdsay</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/nm3.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Twinkling Watermelon</h4>
+    </div>
+</div>
+
+<div id="sd">
+
+    <div>
+        <img src="./Anime images/nm4.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>All of us are dead</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/nm5.jpg" alt="" width="250px" height="300px" style="padding: 10px;">
+        <h4>Alice in Borderland</h4>
+    </div>
+
+    <div>
+        <img src="./Anime images/nm6.jpg" alt=""width="250px" height="300px" style="padding: 10px;">
+        <h4>Elite The Awesome</h4>
+    </div>
+</div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

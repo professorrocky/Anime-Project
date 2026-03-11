@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>navi</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <style>
+           * {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+      #a {
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+            background: #101523;
+            padding: 10px 0;
+            font-size: 20px;
+            padding-top: 5px;
+        }
+        #a span{
+            color: red;
+        }
+        #d li {
+            list-style-type: none;
+            display: inline;
+        }
+        
+
+            #c {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px;
+            }
+
+        #c {
+            font-size: 20px;
+            padding-left: 30px;
+        }
+
+        .zoya {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .zoya a {
+            color: gray;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px 14px;
+            transition: 0.3s;
+
+        }
+
+        .zoya a:hover{
+            color: white;
+        }
+
+        .dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.kundhan i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+        </style>
+    </head>
+
+    <body>
+       <div id="a">
+        <div id="b">
+            <nav>
+                <h1>Ani<span>me</span></h1>
+            </nav>
+        </div>
+
+        <div id="c">
+        
+            <div id="d">
+
+                <ul class="zoya">
+                    <li><a href="homepage.html">Home</a></li>
+                    
+                    <li class="dropdown"><a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+
+                        <ul class="dropdown-content">
+                            <li><a href="categories.html">Categories</a></li>
+                            <li><a href="anime details.html">Anime Details</a></li>
+                            <li><a href="anime watching.html">Anime Watching</a></li>
+                            <li><a href="blog details.html">Blog Details</a></li>
+                            <li><a href="sign up.html">Sign Up</a></li>
+                            <li><a href="login.html">Login</a></li>
+                        </ul>
+
+                    </li>
+                        <li><a href="our blog.html">Our Blog</a></li>
+                        <li><a href="contact us.html">Contacts</a></li>
+                        <a href="#" style="color: aliceblue;"><i class="fa fa-search"></i></a>
+                        <a href="login.html" style="color: aliceblue;"><i class="fa fa-user"></i></a>
+                </ul>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog details</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#action{
+    color: white;
+    font-size: small;
+    margin-left: 40%;
+    margin-top: 05%;
+}
+#action span{
+    color: gray;
+}
+.piece{
+    color: white;
+    margin-left: 30%;
+    margin-top: 50px;
+}
+
+.social{
+    color: white;
+    margin-top: 30px;
+    margin-left: 32%;
+    display: flex;
+}
+.social .fb a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid #0165E1;
+    background-color: #0165E1;
+    padding: 10px;
+}
+.social .pin a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    border: 1px solid red;
+    background-color: red;
+    padding: 10px;
+}
+.social .li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    border: 1px solid #0077B5;
+    background-color: #0077B5;
+    padding: 10px;
+}
+.social .tr a{
+    color: white;
+    text-decoration: none;
+    margin-left: 5px;
+    border: 1px solid skyblue;
+    background-color: skyblue;
+    padding: 10px;
+}
+
+#f1 img{
+    margin-left: 300px;
+    margin-top: 30px;
+}
+#f1 .coming{
+    margin-top: 50px;
+    color: white;
+    margin-left: 650px;
+}
+.coming .co{
+    color: red;
+    margin-left: 20px;
+}
+
+#as{
+    color: white;
+    margin-left: 350px;
+    margin-top: 10px;
+    line-height: 25px;
+}
+#tobi{
+    color: white;
+    margin-left: 340px;
+    margin-top: 30px;
+}
+#tobi h3{
+    color: red;
+    margin-left: 12px;
+    margin-top: 30px;
+}
+#tobi p{
+    color: white;
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+#heal a{
+    color: white;
+    text-decoration: none;
+   
+}
+#heal{
+    display: flex;
+    margin-left: 340px;
+    margin-top: 25px;
+}
+#heal .food{
+    border: 1px solid lightslategray;
+    background-color: lightslategrey;
+    padding: 5px 7px;
+    font-size: small;
+}
+#heal .spo{
+    border: 1px solid lightslategray;
+    background-color: lightslategrey;
+    padding: 5px 10px;
+    font-size: small;
+    margin-left: 10px;
+}
+#heal .game{
+    border: 1px solid lightslategray;
+    background-color: lightslategrey;
+    padding: 5px 10px;
+    font-size: small;
+    margin-left: 10px;
+}
+
+.divider {
+    margin-top:50px;
+    height: 1px;
+    width: 660px;
+    margin-left: 340px;
+    background: grey;
+    opacity: 0.9;
+}
+
+#build{
+    margin-top: 30px;
+}
+#build a{
+    text-decoration: none;
+    color: white;
+    margin-left: 340px;
+}
+.pro{
+    margin-left: 407px;
+    margin-top: -20px;
+}
+
+.divide {
+    margin-top:40px;
+    height: 1px;
+    width: 661px;
+    margin-left: 340px;
+    background: grey;
+    opacity: 0.9;
+}
+#insta{
+    color: white;
+    margin-left: 340px;
+    margin-top: 50px;
+}
+
+#radius{
+    margin-left: 340px;
+    margin-top: 20px;
+}
+
+#radius img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+#radius p{
+    color: gray;
+    margin-left: 80px;
+    margin-top: -50px;
+    font-size: small;
+}
+#radius h4{
+    color: white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+#joe{
+    color: grey;
+    margin-left: 27.5%;
+    margin-top: 10px;
+}
+#like{
+    display: flex;
+    margin-left: 27.5%;
+    margin-top: 25px;
+}
+
+
+#like .ke a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    transition: background-color 2s;
+}
+#like .ke a:hover{
+    background-color: tomato;
+}
+#like .ly a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    margin-left: 10px;
+    transition: background-color 2s;
+}
+#like .ly a:hover{
+    background-color: tomato;
+}
+#sam{
+    margin-left: 27%;
+    margin-top: 30px;
+}
+#sam img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+#sam p{
+    color: gray;
+    margin-left: 80px;
+    margin-top: -50px;
+    font-size: small;
+}
+#sam h4{
+    color: white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+#tom{
+    color: grey;
+    margin-left: 490px;
+    margin-top: 10px;
+}
+#bird{
+    display: flex;
+    margin-left: 490px;
+    margin-top: 25px;
+}
+
+
+#bird .animal a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    transition: background-color 2s;
+}
+#bird .animal a:hover{
+    background-color: tomato;
+}
+#bird .fish a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    margin-left: 10px;
+    transition: background-color 2s;
+}
+#bird .fish a:hover{
+    background-color: tomato;
+}
+
+#cheeku{
+    margin-left: 340px;
+    margin-top: 30px;
+}
+#cheeku img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+#cheeku p{
+    color: gray;
+    margin-left: 80px;
+    margin-top: -50px;
+    font-size: small;
+}
+#cheeku h4{
+    color: white;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+#king{
+    color: grey;
+    margin-left: 330px;
+    margin-top: 10px;
+}
+#kholi{
+    display: flex;
+    margin-left: 333px;
+    margin-top: 25px;
+}
+
+
+#kholi .goat a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    transition: background-color 2s;
+}
+#kholi .goat a:hover{
+    background-color: tomato;
+}
+#kholi .god a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid lightslategray;
+    background-color: lightslategray;
+    padding: 5px 15px;
+    margin-left: 10px;
+    transition: background-color 2s;
+}
+#kholi .god a:hover{
+    background-color: tomato;
+}
+
+.amd {
+    margin-top:60px;
+    height: 1px;
+    width: 52%;
+    margin-left: 247px;
+    background: grey;
+    opacity: 0.9;
+}
+
+#lac{
+    color: white;
+    margin-top: 50px;
+    margin-left: 250px;
+
+}
+.frm{
+    margin-top: 30px;
+}
+/* label {display: block;} */
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.ma{
+    margin-left: 20px;
+}
+input[type=message], select {
+  width: 62.8%;
+  height: 100px;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#puma a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 10px;
+    margin-left: 250px;
+    border-radius: 3px;
+}
+
+#puma{ margin-top: 30px;}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 100px;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 250px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+
+</style>
+    </head>
+    <body>
+        <header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="action">
+    <div>
+        <p>ACTION, MAGIC - <span>March 08, 2025</span></p>
+    </div>
+</div>
+
+<div class="piece">
+        <h1>Anime for Beginners: 20 Pieces <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of Essential Viewing</h1>
+    </div>
+
+<div class="social">
+    <div class="fb">
+        <a href="https://www.facebook.com/share/16qA3puhof/"><i class="fa-brands fa-square-facebook" style="color: #ffffff;"></i> &nbsp;Facebook</a>
+    </div>
+
+    <div class="pin">
+        <a href="https://in.pinterest.com/"><i class="fa-brands fa-pinterest" style="color: #ffffff;"></i>&nbsp;Pinterest</a>
+    </div>
+
+    <div class="li">
+        <a href="https://www.linkedin.com/in/rakeshe08"><i class="fa-brands fa-square-linkedin" style="color: #ffffff;">&nbsp;</i>Linkedin</a>
+    </div>
+
+    <div class="tr">
+        <a href="https://x.com/Rakesh_Rocky_08?t=JOmYqgUDq6QS9oxeWZxkTQ&s=09"><i class="fa-brands fa-square-twitter" style="color: #ffffff;"></i>&nbsp;Twitter</a>
+    </div>
+</div>
+
+<div id="f1">
+    <div class="coming">
+    <h1>ANIME <br> <span class="co">COMING </span><br> IN 2026 </h1>
+</div>
+    <div>
+        <img src="./Anime images/f1.jpg" alt="" width="900px" height="400px">
+    </div>
+</div>
+
+<div id="as">
+    <div>
+        <p>As a result the last couple of eps haven’t been super exciting for me, because they’ve been more <br> like settling into a familiar and comfortable routine.  We’re seeing character growth here but it’s <br> subtle (apart from Shouyou, arguably).  I mean, Tobio being an asshole is nothing new – it’s kind <br> of the foundation of his entire character arc.  Confronting whether his being an asshole is a <br> problem for the Crows this directly is a bit of an evolution, and probably an overdue one at that, <br> but the overall dynamic with Kageyama is basically unchanged.</p>
+    </div>
+</div>
+
+<div id="tobi">
+    <div>
+        <h3>Tobio-Nishinoya showdown:</h3>
+        <img src="./Anime images/t1.webp" alt="" width="700px" height="300px" style="margin-top: 40px;">
+        <p>In Japan the idea of a first-year speaking to a senior the way Kageyama did to Asahi is a lot <br> more shocking than it would be in the West, but Tobio calling out teammates in genuinely rude <br> fashion in the middle of a match is what got him isolated in the  first place.  It’s better for the <br> Crows to sort this out in practice matches than the  real deal, but this is really on Tobio – he has <br> to figure out how to co-exist with others in a team environment.</p>
+    </div>
+
+    <div>
+        <h3>Nanatsu no Taizai: Kamigami No Gekirin:</h3>
+        <img src="./Anime images/t2.jpg" alt="" width="700px" height="300px" style="margin-top: 40px;">
+        <p>In Japan the idea of a first-year speaking to a senior the way Kageyama did to Asahi is a lot <br> more shocking than it would be in the West, but Tobio calling out teammates in genuinely rude <br> fashion in the middle of a match is what got him isolated in the  first place.  It’s better for the <br> Crows to sort this out in practice matches than the  real deal, but this is really on Tobio – he has <br> to figure out how to co-exist with others in a team environment.</p>
+    </div>
+
+    <div>
+        <h3>ID:Ianvaded:</h3>
+        <img src="./Anime images/t3.jpg" alt="" width="700px" height="300px" style="margin-top: 40px;">
+        <p>In Japan the idea of a first-year speaking to a senior the way Kageyama did to Asahi is a lot <br> more shocking than it would be in the West, but Tobio calling out teammates in genuinely rude <br> fashion in the middle of a match is what got him isolated in the  first place.  It’s better for the <br> Crows to sort this out in practice matches than the  real deal, but this is really on Tobio – he has <br> to figure out how to co-exist with others in a team environment.</p>
+    </div>
+</div>
+
+<div id="heal">
+    <div class="food">
+        <a href="#">HEALTHFOOD</a>
+    </div>
+
+    <div class="spo">
+        <a href="#">SPORT</a>
+    </div>
+
+    <div class="game">
+        <a href="#">GAME</a>
+    </div>
+</div>
+
+<div class="divider"></div>
+
+<div id="build">
+    <div>
+        <a href="#"><i class="fa-solid fa-arrow-left fa-sm" style="color: #ffffff;"></i> Building a Better ROCKY...</a>
+    </div>
+
+    <div class="pro">
+        <a href="#">Professor Rakesh: Immortal – 21<i class="fa-solid fa-arrow-right fa-sm"></i></a>
+    </div>
+</div>
+
+<div class="divide"></div>
+
+<div id="insta">
+    <div>
+        <h3>3 Comments</h3>
+    </div>
+</div>
+
+<div id="radius">
+    <div>
+        <img src="./Anime images/milli.jpg" alt="">
+        <p>Sep 08, 2026</p>
+        <h4>Milli Bobby Brown</h4>
+    </div>
+</div>
+
+<div id="joe">
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, <br> consectetur, adipisci velit, sed quia non numquam eius modi</p>
+</div>
+
+<div id="like">
+    <div class="ke">
+        <a href="#">Like</a>
+    </div>
+
+    <div class="ly">
+        <a href="#">Reply</a>
+    </div>
+</div>
+
+<div id="sam">
+    <div>
+        <img src="./Anime images/sam.jpg" alt="">
+        <p>Sep 08, 2026</p>
+        <h4>Samantha</h4>
+    </div>
+</div>
+
+<div id="tom">
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, <br> consectetur, adipisci velit, sed quia non numquam eius modi</p>
+</div>
+
+<div id="bird">
+    <div class="animal">
+        <a href="#">Like</a>
+    </div>
+
+    <div class="fish">
+        <a href="#">Reply</a>
+    </div>
+</div>
+
+<div id="cheeku">
+    <div>
+        <img src="./Anime images/virat.jpg" alt="">
+        <p>Sep 08, 2026</p>
+        <h4>The King Kholi</h4>
+    </div>
+</div>
+
+<div id="king">
+    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, <br> consectetur, adipisci velit, sed quia non numquam eius modi</p>
+</div>
+
+<div id="kholi">
+    <div class="goat">
+        <a href="#">Like</a>
+    </div>
+
+    <div class="god">
+        <a href="#">Reply</a>
+    </div>
+</div>
+
+<div class="amd"></div>
+
+<div id="lac">
+    <div>
+        <h3>Leave A Comment</h3>
+    </div>
+    <form action="" class="frm">
+        <label for="na"></label>
+        <input type="text" id="na" name="na" placeholder="Name">
+
+        <label for="mail" class="ma"></label>
+        <input type="text" id="mail" name="mail" placeholder="Email"> <br>
+
+        <label for="msg"></label>
+        <input type="message" id="msg" name="msg" placeholder="Message"> <br>
+    </form>
+</div>
+
+<div id="puma">
+         <a href="#">SEND MESSAGE</a>
+    </div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

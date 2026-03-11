@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 2;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#ani img{
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    margin-top: -10px;
+}
+
+#ani h4, p{
+    color: hotpink;
+    position: relative;
+    z-index: 1;
+    margin-top: -4px;
+    margin-left: 550px;
+    /* text-align: center; */
+    top: 100px;
+
+}
+
+#ani .st{
+    font-size: xx-large;
+    font-weight: 900;
+}
+#ani p{
+    color: hotpink;
+    margin-left: 450px;
+}
+#sign{
+    color: white;
+    margin-top: 320px;
+    margin-left: 200px;
+
+}
+.frm{
+    margin-top: 30px;
+}
+label {display: block;}
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 30%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+input[type=submit], select{
+    padding: 10px;
+    width: 100px;
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+#puma{
+    margin-top: -30px;
+}
+
+#puma a{
+    text-decoration: none;
+    color: white;
+    margin-left: 150px;
+
+}
+
+#vertical-line{
+    margin-top: -260px;
+        height: 300px;
+        width: 1px;
+        margin-left: 450px;
+        background: #51556b;
+        opacity: 0.9;
+}
+#or{
+    color: white;
+    margin-left: 90px;
+    margin-top: -90px;
+}
+
+#log{
+    margin-left: 700px;
+    margin-top: -230px;
+    color: white;
+}
+#log a{
+    text-decoration: none;
+    color: white;
+}
+.rn{
+    margin-top: 20px;
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 5px 25px;
+    width: 190px;
+}
+#ash{
+    margin-left: 510px;
+    margin-top: 290px;
+    color: white;
+}
+#ash a{
+    text-decoration: none;
+    color: white;
+    word-spacing: 10px;
+}
+#ash .fb{
+    margin-top: 30px;
+    border: 1px solid #0165E1;
+    width: 290px;
+    background-color: #0165E1;
+    padding: 10px;
+    padding-right: 5px;
+}
+
+#ash .gl{
+    margin-top: 15px;
+    border: 1px solid tomato;
+    width: 290px;
+    background-color: tomato;
+    padding: 10px;
+    padding-right: 5px;
+}
+
+#ash .tr{
+    margin-top: 15px;
+    border: 1px solid skyblue;
+    width: 290px;
+    background-color: skyblue;
+    padding: 10px;
+    padding-right: 5px;
+}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 5%;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 250px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+</style>
+    </head>
+
+    <body>
+        <header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="ani">
+    <h4 class="st">Login</h4>
+    <p class="rs"><b>Welcome to the official Anime blog.</b></p>
+    <img src="./Anime images/back.webp" alt="Anime">
+</div>
+
+<div id="sign">
+    <h2>Login</h2>
+
+    <form action="" class="frm">
+        <label for="mail"></label>
+        <input type="text" id="mail" name="mail" placeholder="Email address"> <br>
+
+        <label for="na"></label>
+        <input type="text" id="na" name="na" placeholder="Your Name"> <br>
+
+        <label for="pass"></label>
+        <input type="password" id="pass" name="pass" placeholder="Password"> <br>
+
+        <input type="submit" value="Login Now">
+    </form>
+
+    <div id="puma">
+        <a href="#">Forget Your Password?</a>
+    </div>
+
+    <div id="vertical-line"></div>
+</div>
+
+<div id="or">
+    <div>
+        <p>OR</p>
+    </div>
+</div>
+
+<div id="log">
+    <h1>Dont’t Have An Account?</h1>
+
+    <div class="rn">
+        <a href="sign up.html">REGISTER NOW</a>
+    </div>
+</div>
+
+<div id="ash">
+     <div class="fb">
+        <a href="https://www.facebook.com/share/16qA3puhof/"><i class="fa-brands fa-facebook-f"></i> SIGN IN WITH FACEBOOK</a>
+    </div>
+
+    <div class="gl">
+        <a href="#"><i class="fa-brands fa-google"></i> SIGN IN WITH GOOGLE</a>
+    </div>
+
+    <div class="tr">
+        <a href="https://x.com/Rakesh_Rocky_08?t=JOmYqgUDq6QS9oxeWZxkTQ&s=09"><i class="fa-brands fa-twitter"></i> SIGN IN WITH TWITTER</a>
+    </div>
+</div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+    </body>
+</html>

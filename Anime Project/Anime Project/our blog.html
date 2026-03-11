@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our Blog</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 2;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#ani img{
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    margin-top: -10px;
+}
+
+#ani h4, p{
+    color: hotpink;
+    position: relative;
+    z-index: 1;
+    margin-top: -4px;
+    margin-left: 550px;
+    /* text-align: center; */
+    top: 100px;
+
+}
+
+#ani .st{
+    font-size: xx-large;
+    font-weight: 900;
+}
+#ani .rs{
+    color: red;
+    margin-left: 480px;
+}
+
+#ln img{
+    margin-top: 20%;
+    margin-left: 150px;
+    position: absolute;
+}
+
+#ln a{
+    position: relative;
+    color: white;
+    top: 770px;
+    left: 190px;
+    text-decoration: none;
+    color: white;
+}
+#port img{
+    margin-top: 286px;
+    margin-left: 570px;
+    position: absolute;
+}
+#port a{
+    position: relative;
+    color: white;
+    top: 495px;
+    left: 590px;
+    text-decoration: none;
+    color: white;
+}
+
+#hari img{
+    margin-top: 247px;
+    margin-left: 790px;
+    position: absolute;
+}
+#hari a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 820px;
+    top: 440px;
+    
+}
+
+#rocky img{
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 138px;
+    padding: 10px;
+}
+#rocky a{
+     position: relative;
+    text-decoration: none;
+    color: white;
+    left: 160px;
+    top: 900px;
+}
+
+#raki img{
+    position: absolute;
+    margin-top: 653px;
+    margin-left: 350px;
+    padding: 10px;
+}
+
+#raki a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 370px;
+    top: 865px;
+}
+
+#rakhi img{
+    position: absolute;
+    margin-top: 26%;
+    margin-left: 570px;
+}
+#rakhi a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 600px;
+    top: 850px;
+}
+
+#sam img{
+    position: absolute;
+    margin-top: 58%;
+    margin-left: 140px;
+}
+#sam a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 190px;
+    top: 1320px;
+}
+
+#will img{
+    position: absolute;
+    margin-top: 835px;
+    margin-left: 560px;
+    padding: 10px;
+}
+#will a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 580px;
+    top: 1040px;
+}
+
+#holly img{
+     position: absolute;
+    margin-top: 798px;
+    margin-left: 780px;
+    padding: 10px;
+}
+#holly a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 800px;
+    top: 1005px;
+}
+
+#max img{
+    position: absolute;
+    margin-top: 68%;
+    margin-left: 570px;
+}
+#max a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 630px;
+    top: 1490px;
+}
+
+#billy img{
+    position: absolute;
+    margin-top: 1240px;
+    margin-left: 130px;
+    padding: 10px;
+}
+#billy a{
+     position: relative;
+    text-decoration: none;
+    color: white;
+    left: 160px;
+    top: 1445px;
+}
+
+#nan img{
+    position: absolute;
+    margin-top: 1200px;
+    margin-left: 346px;
+    padding: 10px;
+}
+#nan a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    left: 370px;
+    top: 1405px;
+}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 98%;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 90px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 300px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+</style>
+    </head>
+    <body>
+        <header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="ani">
+    <h4 class="st">Our Blog</h4>
+    <p class="rs">Welcome to the official Anime blog.</p>
+    <img src="./Anime images/back.webp" alt="Anime">
+</div> 
+
+<div id="ln">
+    <div>
+        <img src="./Anime images/h6.jpg" alt="" width="400px" height="450px">
+        <a href="#">Naruto Shippuden</a>
+    </div>
+</div>
+
+<div id="port">
+    <div>
+        <img src="./Anime images/h2.jpg" alt="" width="200" height="200px">
+        <a href="#"> Fate/Stay Night: <br> Untimated Blade World</a>
+    </div>
+</div>
+
+<div id="hari">
+    <div>
+        <img src="./Anime images/h3.jpg" alt="" width="200px" height="200px"> <br>
+        <a href="#">Building a Better LiA <br> Drilling Down</a>
+    </div>
+</div>
+
+<div id="rocky">
+    <div>
+        <img src="./Anime images/h7.jpg" alt="" width="210px" height="200px">
+        <a href="#">Bok no Hero Academia <br> Season 4 – 18</a>
+    </div>
+</div>
+
+<div id="raki">
+    <div>
+        <img src="./Anime images/h8.jpg" alt="" width="210px" height="200px">
+        <a href="#">Fate/Stay Night: <br> Untimated Blade World</a>
+    </div>
+</div>
+
+<div id="rakhi">
+    <div>
+        <img src="./Anime images/h9.jpg" alt="" width="420px" height="428px">
+        <a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a>
+    </div>
+</div>
+
+<div id="sam">
+    <div>
+        <img src="./Anime images/h11.jpg" alt="" width="410px" height="420px">
+        <a href="#">Housekishou Richard shi no Nazo Kantei <br> Season 08 - 20</a>
+    </div>
+</div>
+
+<div id="will">
+    <div>
+        <img src="./Anime images/h12.jpg" alt="" width="215px" height="200px">
+        <a href="#">Bok no Hero Academia <br> Season 4 – 18</a>
+    </div>
+</div>
+
+<div id="holly">
+    <div>
+        <img src="./Anime images/h13.webp" alt="" width="215px" height="200px">
+        <a href="#">Fate/Stay Night: <br> Untimated Blade World</a>
+    </div>
+</div>
+
+<div id="max">
+    <div>
+        <img src="./Anime images/h14.webp" alt="" width="413px" height="430px">
+        <a href="#">Yuri Kuma Arashi Viverra Tortor Pharetra</a>
+    </div>
+</div>
+
+<div id="billy">
+    <div>
+        <img src="./Anime images/h15.webp" alt="" width="215px" height="200px">
+        <a href="#">Fate/Stay Night: <br> Untimated Blade World</a>
+    </div>
+</div>
+
+<div id="nan">
+    <div>
+        <img src="./Anime images/h16.webp" alt="" width="215px" height="200px">
+        <a href="#">Building a Better LiA <br> Drilling Down</a>
+    </div>
+</div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

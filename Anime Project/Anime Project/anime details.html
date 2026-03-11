@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>anime details</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0c0f1a;
+}
+
+header {
+    width: 100%;
+    background: #101523;
+    padding: 10px 0;
+}
+
+.a{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.navbar span {
+    color: #f44336;
+}
+
+.b {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.b a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+    transition: 0.3s;
+}
+
+.b a:hover {
+    color: white;
+}
+.c i {
+    font-size: 18px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    background: black;
+    list-style: none;
+    top: 25px;
+    left: 0;
+    padding: 10px 0;
+    width: 160px;
+    border-radius: 4px;
+    display: none;
+    z-index: 1;
+}
+
+.dropdown-content li a {
+    display: block;
+    padding: 10px 15px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#home{
+        display: flex;
+        margin-left: 60px;
+        margin-top: 20px;
+        font-size: smaller;
+    }
+.me a{
+    color: white;
+    text-decoration: none;
+}
+.me p{
+    display: inline;
+    color: gray;
+}
+.me i{
+    color: white;
+}
+
+#raki{
+    margin-left: 60px;
+    margin-top: 40px;
+    display: flex;
+    line-height: 25px;
+}
+.swe{
+    margin-left: 30px;
+}
+.swe h2{
+    color: white;
+}
+.ma{
+    color: gray;
+    margin-top: 10px;
+}
+.mei{
+    color: gray;
+    margin-top: 20px;
+}
+#type{
+    margin-top: -160px;
+    line-height: 23px;
+    margin-left: 310px;
+    color: gray;
+    font-size: small;
+    display: flex;
+}
+#type li{
+    list-style-type: square;
+}
+/* #type span{
+    color: white;
+    margin-left: 10px;
+    flex-direction: column;
+} */
+.dur{
+    margin-left: 80px;
+}
+
+#low{
+    margin-left: 298px;
+    margin-top: 20px;
+    display: flex;
+}
+#low a{
+    text-decoration: none;
+    color: white;
+    font-variant: small-caps;
+}
+.follow{
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 5px 10px;
+}
+.watch{
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+#swe{
+    color: white;
+    margin-left: 60px;
+    margin-top: 40px;
+}
+.naruto{
+    display: flex;
+    /* align-items: flex-start; */
+    /* margin-bottom: 25px; */
+}
+.avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+    margin-left: 50px;
+    margin-top: 20px;
+    background: #ffffff33;
+}
+.bubble{
+    background-color: #4c4b74;
+    padding: 10px 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 50%;
+    position: relative;
+}
+.name-time{
+    color: white;
+    margin-bottom: 5px;
+}
+.uzumaki{
+    color: darkgray;
+}
+.bubble::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        top: 13px;
+        width: 0;
+        height: 0;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+        border-right: 18px solid #4c4b74;
+    }
+
+#uml{
+    color: white;
+    margin-left: 60%;
+    margin-top: -517px;
+}
+
+.aa{
+    margin-left: 60%;
+    margin-top: 10px;
+    font-size: x-small;
+    color: white;
+}
+.aa h3{
+    margin-left: 30px;
+}
+
+
+
+#your{
+    color: white;
+    margin-left: 50px;
+    margin-top: -150px;
+}
+
+#tobi{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+input[type=textarea], select {
+  width: 50%;
+  padding: 30px;
+  margin: 8px 0;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#lol{
+    margin-top: 20px;
+}
+#lol a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid tomato;
+    background-color: tomato;
+    padding: 5px 12px;
+    margin-left: 50px;
+    font-variant: small-caps;
+}
+
+#down {
+    width: 100%;
+    background: #101523;
+    padding: 40px 0;
+    margin-top: 5%;
+}
+
+.vec{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hen{
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 100px;
+}
+
+.hen span {
+    color: #f44336;
+}
+
+.hendry {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-right: 250px;
+}
+
+.hendry a {
+    color: grey;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 14px;
+}
+</style>
+</head>
+<body>
+    <header>
+    <div class="a">
+        <nav class="navbar">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="b">
+            <li><a href="Anime.html">Homepage</a></li>
+
+            <li class="dropdown">
+                <a href="categories.html">Categories <i class="fa fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="anime details.html">Anime Details</a></li>
+                    <li><a href="anime watching.html">Anime Watching</a></li>
+                    <li><a href="blog details.html">Blog Details</a></li>
+                    <li><a href="sign up.html">Sign Up</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </li>
+
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+
+        <div class="c">
+            <a href="#"><i class="fa fa-search"></i></a>
+            <a href="login.html"><i class="fa fa-user"></i></a>
+        </div>
+    </div>
+</header>
+
+<div id="home">
+    <div class="me">
+    <i class="fa-solid fa-house fa-2xs" style="color: #e00606;"></i> <a href="Anime.html">Home</a>
+    <i class="fa-solid fa-angle-right fa-2xs"></i>
+    <a href="categories.html">Categories</a>
+    <i class="fa-solid fa-angle-right fa-2xs"></i>
+    <p>Romance</p>
+    </div>
+</div>
+
+<div id="raki">
+
+    <div class="rocky">
+        <img src="./Anime images/t1.webp" alt="" width="210px" height="350px">
+    </div>
+
+    <div class="swe">
+        <h2>Naruto: Shippuden &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i><i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i><i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i><i class="fa-solid fa-star fa-2xs" style="color: #FFD43B;"></i></h2>
+        <p class="ma">フェイト／ステイナイト, Feito／sutei naito &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.029 Votes</p>
+        <p class="mei">Every human inhabiting the world of Alcia is branded by a “Count” or a number written on their body. <br>
+        For Hina’s mother, her total drops to 0 and she’s pulled into the Abyss, never to be seen again. But her <br>
+        mother’s last words send Hina on a quest to find a legendary hero from the Waste War - the fabled <br>
+        Ace!</p>
+    </div>
+</div>
+
+<div id="type">
+    <div>
+        <ul>
+            <li>Type: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TV Series</span></li>
+            <li>Studios: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Lerche</span></li>
+            <li>Date aired: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Dec 08,2025 to ?</span></li>
+            <li>Status: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Airing</span></li>
+            <li>Genre: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Romance, Action, Adventure, Fantasy</span></li>
+        </ul>
+    </div>
+    
+    <div class="dur">
+        <li>Scores: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.31 / 2000</span></li>
+        <li>Rating: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9.5 / 200 times</span></li>
+        <li>Duration: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35 min / epi</span></li>
+        <li>Quality: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HD</span></li>
+        <li>Views: <span style="color: white;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 131,541</span></li>
+    </div>
+</div>
+
+<div id="low">
+    
+    <div class="follow">
+        <a href="https://www.instagram.com/__kingofme___?igsh=YzU2bXNvZXJrbndv"><i class="fa-regular fa-heart fa-2xs" style="color: #ffffff;"></i> follow</a>
+    </div>
+    <div class="watch">
+        <a href="https://www.justwatch.com/in/tv-show/naruto">watch now <i class="fa-solid fa-angle-right fa-2xs" style="color: #ffffff;"></i></a>
+    </div>
+</div>
+
+<div id="swe">
+    <div>
+        <h3>REVIEWS</h3>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n1.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Madara - <span style="color: darkgray; font-size: small;">1 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>whachikan Just noticed that someone categorized this as belonging to the genre "demons" LOL</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n2.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Sasuke - <span style="color: darkgray; font-size: small;">5 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Finally it came out ages ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n3.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Naruto - <span style="color: darkgray; font-size: small;">20 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>whachikan Just noticed that someone categorized this as belonging to the genre "demons" LOL</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n4.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Itachi - <span style="color: darkgray; font-size: small;">1 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Where is the episode 15 ? Slow update! Tch</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n5.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Obito - <span style="color: darkgray; font-size: small;">5 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Finally it came out ages ago</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="comments-container">
+    <div class="naruto">
+        <img src="./Anime images/n6.webp" alt="" class="avatar">
+        <div class="bubble">
+            <div class="name-time">Kakashi - <span style="color: darkgray; font-size: small;">20 Hour ago</span></div>
+            <div class="uzumaki">
+                <p>Where is the episode 15 ? Slow update! Tch</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="uml">
+    <div>
+        <h5> <big>|</big> YOU MIGHT LIKE</h5>
+    </div>
+</div>
+
+<div class="aa">
+    <div>
+        <img src="./Anime images/rs1.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>One Piece</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs2.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>Boruto: Naruto next generations</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs3.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>One Piece Master</h3>
+    </div>
+
+    <div>
+        <img src="./Anime images/rs4.jpg" alt="" width="300px" style="padding: 10px;">
+        <h3>Onepunch Man</h3>
+    </div>
+</div>
+
+<div id="your">
+    <h3>YOUR COMMENT</h3>
+</div>
+
+<div id="tobi">
+    <label for="com"></label>
+    <input type="textarea" id="com" name="com" placeholder="Your Comment">
+</div>
+
+<div id="lol">
+    <a href="#"><i class="fa-solid fa-comment fa-2xs" style="color: #ffffff;">&nbsp;</i>review</a>
+</div>
+
+<div id="down">
+    <div class="vec">
+        <nav class="hen">
+            Ani<span>me</span>
+        </nav>
+
+        <ul class="hendry">
+            <li><a href="Anime.html">Homepage</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="our blog.html">Our Blog</a></li>
+            <li><a href="contact us.html">Contacts</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
